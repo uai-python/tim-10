@@ -1,0 +1,4 @@
+WTF_CSRF_ENABLED=True
+SECRET_KEY='fighting!'
+SQLALCHEMY_DATABASE_URI='sqlite:////tmp/web.db'
+SQLALCHEMY_ECHO=False
