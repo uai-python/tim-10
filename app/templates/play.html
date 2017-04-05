@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %} 
+	<h4>"Seberapa jauh Anda mengenal kota Anda?"</h4>
+
+	<hr>
+
+	<form>
+		<table class= soals>
+			{% for soal in soal2 %}
+			<tr>
+				<td>{{ soal }}</td>
+			</tr>
+			{% endfor %}
+			
+	</form>
+
+{% endblock %}
+	

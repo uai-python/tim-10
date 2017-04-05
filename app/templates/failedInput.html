@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %} 
+	<h4>Mohon untuk mengisi data diri Anda dengan lengkap !</h4>
+
+	<hr>
+
+	<form action="/simpanData" method="post" name="form_data_diri">
+		{{ form.hidden_tag() }}
+		<p>Usia : </br>{{ form.usia(size=5) }}</br> 
+		</p>
+		<p>Jenis Kelamin : </br> {{ form.jenis_kelamin() }}
+		</p>
+		<p>Kota/ Kabupaten : </br> {{ form.kota_kabupaten() }}</br> 
+		</p>
+		<p><input type="submit" value="Simpan"></br> 
+		</p>
+	</form>
+	
+{% endblock %}
+	

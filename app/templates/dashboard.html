@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %} 
+	<h4>"Seberapa jauh Anda mengenal kota Anda?"</h4>
+
+	<hr>
+	<center>
+	<form action="/finish" method="post" name="play_10">
+		<table class= soals>
+			
+			{% for soaal in query %}
+			<tr>
+				{% if userid|string() ==soaal.user_id|string() %}
+					<td>Userid : {{ userid}}</td>
+					<td>User id : {{ soaal.user_id }}</td>
+					<td>soal id : {{ soaal.soal_id }}</td>
+					<td>jawaban user :{{ soaal.jawaban_user }}</td>
+				{% endif %}
+			</tr>
+			{% endfor %}
+			
+			<tr>
+				<td><input type="submit" value="Lanjutkan"></br></td>
+			</tr>
+		</table>
+	</form>			
+	</center>
+{% endblock %}
+	

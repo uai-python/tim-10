@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %} 
+	<h4>"Seberapa jauh Anda mengenal kota Anda?"</h4>
+
+	<hr>
+	<center>
+	<form action="/play_4" method="post" name="play_3">
+		<table class= soals>
+			{% for soalid in soal2 %}
+			<tr>
+				{% if view %}
+					<td>{{ soalid }}</td>
+				{% endif %}
+			</tr>
+			{% endfor %}
+			{% for soaal in soal3 %}
+			<tr>
+				<td>{{ soaal }}</td>
+				
+			</tr>
+			{% endfor %}
+			<tr>
+				{% if view %}
+					<td>{{ users }}</td>
+				{% endif %}
+			</tr>
+			{{ form.hidden_tag() }}
+			<tr>
+				<td>Jawaban Anda : </br>{{ form.angka_jawaban(size=5) }}</td>
+	
+			</tr>
+			<tr>
+				<td><input type="submit" value="Lanjutkan"></br></td>
+			</tr>
+		</table>
+	</form>			
+	</center>
+{% endblock %}
+	
